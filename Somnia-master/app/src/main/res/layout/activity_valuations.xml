@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Valuations"
+    android:background="@drawable/n2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a0000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"></LinearLayout>
+
+    <TextView
+        android:id="@+id/valuations"
+        style="@style/Title"
+        android:layout_width="250dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/valuations"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rate_your_sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/reef"
+        android:textColor="#ffffff"
+        android:text="@string/rate_your_sleep"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/valuations"
+        app:layout_constraintTop_toBottomOf="@+id/valuations" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#f7ef8a"
+        android:progressBackgroundTint="@color/gris"
+        app:layout_constraintStart_toStartOf="@+id/rate_your_sleep"
+        app:layout_constraintTop_toBottomOf="@+id/rate_your_sleep"
+        tools:ignore="PrivateResource" />
+
+    <TextView
+        android:id="@+id/sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/reef"
+        android:textColor="#ffffff"
+        android:text="@string/sport"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <CheckBox
+        android:id="@+id/checkBox_sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#f4bbff"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sport"
+        app:layout_constraintStart_toEndOf="@+id/sport" />
+
+    <TextView
+        android:id="@+id/coffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/reef"
+        android:textColor="#ffffff"
+        android:text="@string/coffee"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/sport"
+        app:layout_constraintTop_toBottomOf="@+id/sport" />
+
+    <CheckBox
+        android:id="@+id/checkBox_coffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#f4bbff"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_sport"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_sport" />
+
+    <TextView
+        android:id="@+id/alcohol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/reef"
+        android:textColor="#ffffff"
+        android:text="@string/alcohol"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/coffee"
+        app:layout_constraintTop_toBottomOf="@+id/coffee" />
+
+    <CheckBox
+        android:id="@+id/checkBox_alcohol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#f4bbff"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_coffee"
+        app:layout_constraintTop_toBottomOf="@+id/coffee" />
+
+    <TextView
+        android:id="@+id/add_a_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/reef"
+        android:textColor="#ffffff"
+        android:text="@string/comments"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/alcohol"
+        app:layout_constraintTop_toBottomOf="@+id/alcohol" />
+
+    <EditText
+        android:id="@+id/text_comment"
+        android:layout_width="305dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:background="@drawable/comments_input"
+        android:backgroundTint="#E3D4EA"
+        android:foregroundTint="#F4F1F1"
+        android:gravity="top"
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:hint="@string/comment_text"
+        android:inputType="text"
+        android:singleLine="false"
+        app:layout_constraintStart_toStartOf="@+id/add_a_comment"
+        app:layout_constraintTop_toBottomOf="@+id/add_a_comment" />
+
+    <Button
+        android:id="@+id/pickDate"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/reef"
+        android:background="@drawable/button_gradient_lavender"
+        android:text="@string/date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_comment"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="101dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/reef"
+        android:background="@drawable/button_gradient_stroke"
+        android:text="@string/Save"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/pickDate"
+        app:layout_constraintTop_toBottomOf="@+id/text_comment"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="101dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/reef"
+        android:background="@drawable/input"
+        android:text="@string/Cancel"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/text_comment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

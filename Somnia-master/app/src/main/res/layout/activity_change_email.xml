@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/n2"
+    tools:context=".view.ChangeEmail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a0000000"
+        ></LinearLayout>
+
+    <TextView
+        android:id="@+id/top_chEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/ch_Email"
+        style="@style/Title"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/current_Email"
+        android:layout_width="302dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:backgroundTint="@color/white"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:autofillHints="@string/current_Email"
+        android:paddingLeft="20dp"
+        android:hint="Current email"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:fontFamily="@font/reef_family"
+        app:layout_constraintStart_toStartOf="@+id/top_chEmail"
+        app:layout_constraintTop_toBottomOf="@+id/top_chEmail" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="302dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/white"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:autofillHints="@string/password"
+        android:paddingLeft="20dp"
+        android:hint="Current password"
+
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:fontFamily="@font/reef"
+        app:layout_constraintStart_toStartOf="@+id/current_Email"
+        app:layout_constraintTop_toBottomOf="@+id/current_Email" />
+
+    <EditText
+        android:id="@+id/new_Email"
+        android:layout_width="302dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:backgroundTint="@color/white"
+        android:autofillHints="@string/new_Email"
+        android:paddingLeft="20dp"
+        android:hint="New email"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:fontFamily="@font/reef"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/save_changes"
+        android:onClick="save_changes"
+        android:layout_width="140dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/save_changes"
+        android:fontFamily="@font/reef"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_gradient_stroke"
+        app:layout_constraintStart_toStartOf="@+id/new_Email"
+        app:layout_constraintTop_toBottomOf="@+id/new_Email" />
+
+    <Button
+        android:id="@+id/ret"
+        android:onClick="ret"
+        android:layout_width="140dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="112dp"
+        android:text="@string/ret"
+        android:fontFamily="@font/reef"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:background="@drawable/input"
+        app:layout_constraintStart_toStartOf="@+id/save_changes"
+        app:layout_constraintTop_toTopOf="@+id/save_changes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
